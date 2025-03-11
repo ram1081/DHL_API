@@ -1,0 +1,33 @@
+{
+	"name": "laravel-dhl-api",
+	"description": "DHL XML Wrapper for Laravel",
+	"license": "MIT",
+	"authors": [{
+			"name": "Sivasankar Ramasamy",
+			"email": "Sivasankar.ramasamy61@gmail.com"
+		}
+	],
+	"minimum-stability": "stable",
+	"keywords": [
+		"laravel",
+		"php",
+		"dhl xml",
+		"dhml xml api"
+	],
+	"autoload": {
+		"psr-4": {
+			"\\DHLApi\\": "src/"
+		}
+	},
+	"require": {
+		"php": ">=8.0.0"
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"DHLApi\\DHLAPIProvider"
+			]
+		}
+	}
+
+}
