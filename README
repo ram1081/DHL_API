@@ -1,0 +1,27 @@
+### Routing
+
+Used to provide routing information about a parcel to a particular address.
+
+php
+$routing = new  \DHLApi\Calls\GetRouting();
+
+$routing = $routing->reference("8007-401067103:")->address([
+'postalCode:' => 'DE', 
+'RequestType' => 'O', 
+'addressLocality:'  => 'Dresden',
+'PostalCode' => '01067',
+'countryCode' => 'DE',
+'locationName' => 'Packstation 103', 
+'OriginCountryCode' => 'DE'
+]);
+
+$routing->getResponse();
+
+
+## Methods 
+
+`getResponse()` - This will execute the cURL request and return the XML data as an `Object`.
+
+`getRawResponse()` - This will return the XML response from the DHL API as A `String`.
+
+`toXML()` - This will return the XML you sent to the DHL API as A `String`.
